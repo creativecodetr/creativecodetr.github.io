@@ -29,7 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.671); /* Add black opaque background */
+    background: rgba(0, 0, 0, 0.671); /* Opaque background */
 }
 
 .container {
@@ -38,10 +38,10 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem; /* Reduce font size */
+    font-size: 2.5rem;  
     margin-bottom: 2rem;
-    color: white; /* Change text color to white */
-    font-weight: normal; /* Remove bold effect */
+    color: white;  
+    font-weight: normal;  
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
@@ -75,7 +75,7 @@ social-link:hover {
 
 .social-link:nth-child(1):hover { color: #6e5494; }  /* GitHub */
 .social-link:nth-child(2):hover { color: #E1306C; }  /* Instagram */
-.social-link:nth-child(3):hover { color: #1DA1F2; }  /* Twitter */
+.social-link:nth-child(3):hover { color: #1DA1F2; }  /* X */
 .social-link:nth-child(4):hover { color: #7289DA; }  /* Discord */
 
 .avatar {
@@ -84,7 +84,7 @@ social-link:hover {
     margin: 0 auto 1rem;
     border-radius: 50%;
     overflow: hidden;
-    cursor: pointer; /* Add cursor change */
+    cursor: pointer; /* Add cursor */
 }
 
 .avatar img {
@@ -103,7 +103,7 @@ social-link:hover {
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem; /* Adjust font size for smaller screens */
+        font-size: 2rem;  
     }
     
     .description p {
@@ -117,7 +117,7 @@ social-link:hover {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        font-size: 1.5rem;  
     }
     
     .container {
