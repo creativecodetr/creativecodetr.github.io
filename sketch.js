@@ -5,7 +5,7 @@ function setup() {
     const canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('p5-container');
     
-    // Initialize particles
+    
     for (let i = 0; i < numParticles; i++) {
         particles.push(new Particle());
     }
@@ -14,13 +14,13 @@ function setup() {
 function draw() {
     background(10, 10, 10, 20);
     
-    // Update and display particles
+     
     for (let particle of particles) {
         particle.update();
         particle.display();
     }
     
-    // Draw lines between particles
+     
     for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
             let distance = dist(particles[i].position.x, particles[i].position.y, particles[j].position.x, particles[j].position.y);
@@ -37,7 +37,7 @@ class Particle {
         this.position = createVector(random(width), random(height));
         this.velocity = createVector(random(-1, 1), random(-1, 1));
         this.size = random(2, 5);
-        this.color = color(255); // Set color to white
+        this.color = color(255);  
     }
     
     update() {
@@ -52,7 +52,7 @@ class Particle {
             this.velocity.add(dir);
         }
         
-        this.velocity.mult(0.98); // Add some friction
+        this.velocity.mult(0.98);  
         this.position.add(this.velocity);
         
         // Wrap around edges
@@ -71,7 +71,7 @@ class Particle {
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-    // Reinitialize particles to fit the new canvas size
+    
     particles = [];
     for (let i = 0; i < numParticles; i++) {
         particles.push(new Particle());
