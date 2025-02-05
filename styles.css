@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#p5-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.671); /* Add black opaque background */
+}
+
+.container {
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem; /* Reduce font size */
+    margin-bottom: 2rem;
+    color: white; /* Change text color to white */
+    font-weight: normal; /* Remove bold effect */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.description {
+    margin-bottom: 3rem;
+}
+
+.description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-link {
+    color: white;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+social-link:hover {
+    transform: translateY(-5px);
+}
+
+.social-link:nth-child(1):hover { color: #6e5494; }  /* GitHub */
+.social-link:nth-child(2):hover { color: #E1306C; }  /* Instagram */
+.social-link:nth-child(3):hover { color: #1DA1F2; }  /* Twitter */
+.social-link:nth-child(4):hover { color: #7289DA; }  /* Discord */
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer; /* Add cursor change */
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.save-icon {
+    display: none;
+}
+
+.save-icon:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+    
+    .description p {
+        font-size: 1rem;
+    }
+    
+    .social-link {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    .social-links {
+        gap: 1.5rem;
+    }
+}
